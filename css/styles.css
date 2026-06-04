@@ -10865,7 +10865,6 @@ p.lead {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.5rem;
-  color: #77ab3f;
 }
 
 #sideNav {
@@ -11026,3 +11025,15 @@ section.resume-section .resume-section-content {
   transition: color 0.2s ease;
 }
 .project-gh:hover { color: #77ab3f !important; }
+
+/* Green only on group-label subheadings (skill categories + section dividers).
+   Entry data — company names, institutions, taglines, contact line — stays dark. */
+.col-lg-6 > .subheading,
+.subheading.mt-2 {
+  color: #77ab3f;
+}
+/* A bit more breathing room above the divider labels (Techniques, Languages,
+   Other Projects, Certifications, Awards) so they don't crowd the entry above. */
+.subheading.mt-2 {
+  margin-top: 1.75rem !important;
+}
