@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Nico Pardo Medina — CV. Python developer specialising in machine learning and data science." />
+    <title>Nico Pardo Medina — CV</title>
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,700,800" rel="stylesheet" />
+    <style>
+        :root {
+            --green: #77ab3f;
+            --green-dark: #527a2c;
+            --green-soft: #f4f8ee;
+            --heading: #343a40;
+            --text: #212529;
+            --muted: #6c757d;
+            --border: #dee2e6;
+        }
+        * { box-sizing: border-box; }
+        html, body { margin: 0; padding: 0; }
+        body {
+            font-family: Muli, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+            color: var(--text);
+            font-size: 10.5pt;
+            line-height: 1.45;
+            background: #e9ecef;
+        }
+        .page {
+            max-width: 210mm;
+            margin: 12px auto;
+            background: #fff;
+            padding: 22mm 18mm;
+            box-shadow: 0 4px 24px rgba(0,0,0,.12);
+        }
+        h1, h2, h3 {
+            font-family: "Saira Extra Condensed", "Segoe UI", sans-serif;
+            color: var(--heading);
+            margin: 0;
+            line-height: 1.1;
+        }
+        h1 { font-size: 40pt; font-weight: 700; letter-spacing: .02em; }
+        h1 .fn { color: var(--green); }
+        .title { font-family: "Saira Extra Condensed", sans-serif; font-weight: 500;
+                 text-transform: uppercase; letter-spacing: .18em; color: var(--muted);
+                 font-size: 12.5pt; margin: 2px 0 10px; }
+        .contact { font-size: 9.7pt; color: var(--text); }
+        .contact a { color: var(--green-dark); text-decoration: none; }
+        .contact span.sep { color: var(--border); margin: 0 7px; }
+        .summary { margin: 12px 0 4px; color: #333; }
+
+        hr.rule { border: 0; border-top: 1px solid var(--border); margin: 14px 0; }
+
+        .cols { display: flex; gap: 26px; }
+        .main { flex: 1 1 63%; }
+        .side { flex: 1 1 34%; }
+
+        h2.sec {
+            font-size: 15.5pt; font-weight: 700; text-transform: uppercase;
+            letter-spacing: .08em; color: var(--heading);
+            border-bottom: 2px solid var(--green); padding-bottom: 3px;
+            margin: 0 0 10px;
+        }
+        .side h2.sec { font-size: 13.5pt; }
+        section { margin-bottom: 16px; }
+
+        .entry { margin-bottom: 12px; page-break-inside: avoid; }
+        .entry .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+        .entry h3 { font-size: 14.5pt; font-weight: 700; }
+        .entry .org { font-family: "Saira Extra Condensed", sans-serif; text-transform: uppercase;
+                      letter-spacing: .1em; color: var(--muted); font-size: 10.5pt; margin-bottom: 3px; }
+        .entry .date { color: var(--green); font-weight: 700; font-size: 9.3pt; white-space: nowrap;
+                       font-family: "Saira Extra Condensed", sans-serif; letter-spacing: .04em; }
+        ul.bul { margin: 3px 0 0; padding-left: 16px; }
+        ul.bul li { margin-bottom: 2px; }
+        .tools { color: var(--muted); font-size: 9.2pt; margin-top: 3px; }
+        .tools b { color: var(--heading); }
+
+        .skillgroup { margin-bottom: 9px; }
+        .skillgroup .lbl { font-family: "Saira Extra Condensed", sans-serif; text-transform: uppercase;
+                           letter-spacing: .1em; color: var(--green-dark); font-weight: 700;
+                           font-size: 9.6pt; margin-bottom: 1px; }
+        .skillgroup .vals { font-size: 9.5pt; color: #333; }
+
+        ul.tech { list-style: none; margin: 0; padding: 0; font-size: 9.4pt; }
+        ul.tech li { position: relative; padding-left: 15px; margin-bottom: 2px; }
+        ul.tech li::before { content: "▸"; color: var(--green); position: absolute; left: 0; }
+
+        ul.lang { list-style: none; margin: 0; padding: 0; font-size: 9.6pt; }
+        ul.lang li { margin-bottom: 2px; }
+        ul.lang li b { color: var(--heading); }
+        ul.lang li .lvl { color: var(--muted); }
+
+        .proj { margin-bottom: 9px; page-break-inside: avoid; }
+        .proj .pn { font-weight: 800; color: var(--heading); }
+        .proj .pt { color: var(--green-dark); font-size: 8.9pt; text-transform: uppercase; letter-spacing: .06em; }
+        .proj p { margin: 2px 0 0; font-size: 9.3pt; color: #444; }
+
+        @media print {
+            body { background: #fff; font-size: 10pt; }
+            .page { box-shadow: none; margin: 0; max-width: none; padding: 0; }
+            @page { size: A4; margin: 13mm 14mm; }
+            a { color: var(--green-dark) !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- Header -->
+        <header>
+            <h1><span class="fn">Nico</span> Pardo Medina</h1>
+            <div class="title">Python Developer · Machine Learning &amp; Data Science</div>
+            <div class="contact">
+                Barcelona, Spain
+                <span class="sep">|</span> +34 675 25 26 99
+                <span class="sep">|</span> <a href="mailto:jcparmed@gmail.com">jcparmed@gmail.com</a>
+            </div>
+            <p class="summary">Python developer specialising in machine learning and data science, with hands-on
+            experience across backend and data engineering. Self-driven and curious — I enjoy picking up hard
+            problems and figuring them out, whether that's training a model, building an API, or automating
+            something that was taking too long by hand.</p>
+        </header>
+        <hr class="rule" />
+
+        <div class="cols">
+            <!-- MAIN COLUMN -->
+            <div class="main">
+                <section>
+                    <h2 class="sec">Experience</h2>
+
+                    <div class="entry">
+                        <div class="row"><h3>Data &amp; Backend Engineer</h3><span class="date">Jul 2025 – Present</span></div>
+                        <div class="org">MSI Digital Builders</div>
+                        <ul class="bul">
+                            <li>Built the backend and infrastructure (FastAPI, PostgreSQL, AWS CDK) for <b>Render AI</b>, a multi-tenant SaaS for AI-generated architectural renders, with a strong focus on test coverage and regression safety.</li>
+                            <li>Worked on <b>ECiCo</b>, a construction data space on Eclipse Dataspace Components: implemented access policies and data-transfer methods on the connector, and built a Java/JUnit integration suite covering the full contract flow (asset/policy creation, negotiation, transfer).</li>
+                            <li>Built data-extraction integrations (Google Drive, PostgreSQL, Odoo / Mail Relay / Active Campaign APIs) with cleaning in pandas for an internal data-unification project.</li>
+                        </ul>
+                        <div class="tools"><b>Tools:</b> Python, Java, FastAPI, SQLAlchemy, PostgreSQL, AWS CDK, pytest, JUnit, pandas</div>
+                    </div>
+
+                    <div class="entry">
+                        <div class="row"><h3>Data Scientist</h3><span class="date">Feb 2025 – Jul 2025</span></div>
+                        <div class="org">Alight</div>
+                        <ul class="bul">
+                            <li>Contributed to two predictive models for the sales team: an ideal-customer scoring model from company attributes, and a propensity-to-win model from deal and seller attributes.</li>
+                            <li>Worked across the modelling workflow — data cleaning, model comparison, hyperparameter tuning and evaluation.</li>
+                        </ul>
+                        <div class="tools"><b>Tools:</b> Python, PyCaret, scikit-learn, XGBoost, LightGBM</div>
+                    </div>
+
+                    <div class="entry">
+                        <div class="row"><h3>Simulation Engineer</h3><span class="date">Jun 2024 – Dec 2024</span></div>
+                        <div class="org">FlexSim Iberia</div>
+                        <ul class="bul">
+                            <li>Built discrete-event simulation models (digital twins) of production and logistics processes, coding custom logic in FlexScript, for industrial clients across manufacturing, automotive (incl. AGVs) and pharma.</li>
+                            <li>Defined KPIs and ran experiments to pinpoint bottlenecks and turn results into optimization recommendations; delivered client tutoring on operating the models.</li>
+                        </ul>
+                        <div class="tools"><b>Tools:</b> FlexSim, FlexScript</div>
+                    </div>
+
+                    <div class="entry">
+                        <div class="row"><h3>Data Engineer</h3><span class="date">Oct 2023 – Jan 2024</span></div>
+                        <div class="org">Experis</div>
+                        <ul class="bul">
+                            <li>Built data filters and extraction routines for Santander's insurance division, turning business requirements into reusable big-data jobs, with PySpark MLlib for exploratory predictive modelling.</li>
+                        </ul>
+                        <div class="tools"><b>Tools:</b> Python, PySpark (MLlib), Hadoop, Hive</div>
+                    </div>
+
+                    <div class="entry">
+                        <div class="row"><h3>Data Scientist</h3><span class="date">Mar 2022 – Oct 2023</span></div>
+                        <div class="org">Cesefor</div>
+                        <ul class="bul">
+                            <li>Developed a YOLO object-detection model to detect and count logs on trucks (for Trucker/NEMUS), plus an image-comparison system matching logs origin-to-destination via a per-log deep-learning "fingerprint".</li>
+                            <li>Trained a MobileNet classifier (VigilanTree) flagging forest vehicles and suspicious activity from camera-trap images; automated time-tracking reporting (pandas/gspread) and built Looker Studio dashboards; built a Unity/Vuforia AR viewer for 3D wood-construction models.</li>
+                        </ul>
+                        <div class="tools"><b>Tools:</b> Python, Go, PyTorch, TensorFlow, OpenCV, pandas, Google Colab</div>
+                    </div>
+
+                    <div class="entry">
+                        <div class="row"><h3>Google Search Language Specialist</h3><span class="date">Feb 2020 – Oct 2021</span></div>
+                        <div class="org">Qualitest</div>
+                    </div>
+
+                    <div class="entry">
+                        <div class="row"><h3>Spanish Localization Specialist</h3><span class="date">Jun 2018 – Oct 2019</span></div>
+                        <div class="org">Ubisoft</div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="sec">Education</h2>
+                    <div class="entry">
+                        <div class="row"><h3>Game Programming with Unity</h3><span class="date">2022 – 2023</span></div>
+                        <div class="org">EVAD · Escuela Superior de Videojuegos y Arte Digital</div>
+                    </div>
+                    <div class="entry">
+                        <div class="row"><h3>Bootcamp — Data Science &amp; Machine Learning</h3><span class="date">2021</span></div>
+                        <div class="org">ID Bootcamps</div>
+                    </div>
+                    <div class="entry">
+                        <div class="row"><h3>Master's Degree in Software Localization</h3><span class="date">2017 – 2019</span></div>
+                        <div class="org">Instituto Superior de Estudios Lingüísticos y Traducción (ISTRAD)</div>
+                    </div>
+                    <div class="entry">
+                        <div class="row"><h3>Degree in Translation &amp; Interpreting</h3><span class="date">2011 – 2016</span></div>
+                        <div class="org">Universidad Pablo de Olavide</div>
+                    </div>
+                    <div class="entry">
+                        <div class="row"><h3>Degree in Human Studies</h3><span class="date">2011 – 2016</span></div>
+                        <div class="org">Universidad Pablo de Olavide</div>
+                    </div>
+                    <div class="entry">
+                        <div class="row"><h3 style="font-size:12pt;">Certification — NLP with Python (Udemy) &nbsp;·&nbsp; Award — Winner, JOBMadrid Junior Hackathon</h3><span class="date">2021</span></div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- SIDE COLUMN -->
+            <div class="side">
+                <section>
+                    <h2 class="sec">Skills</h2>
+                    <div class="skillgroup"><div class="lbl">Languages</div><div class="vals">Python, Java, C#, Go</div></div>
+                    <div class="skillgroup"><div class="lbl">ML &amp; Data</div><div class="vals">pandas, NumPy, scikit-learn, XGBoost, LightGBM, PyCaret, Matplotlib, MLflow</div></div>
+                    <div class="skillgroup"><div class="lbl">Deep Learning &amp; CV</div><div class="vals">PyTorch, TensorFlow, Keras, OpenCV</div></div>
+                    <div class="skillgroup"><div class="lbl">NLP &amp; Generative AI</div><div class="vals">Hugging Face, spaCy, Ollama, RAG, LoRA, tool-calling agents</div></div>
+                    <div class="skillgroup"><div class="lbl">Backend &amp; APIs</div><div class="vals">FastAPI, Flask, SQLAlchemy, Pydantic, pytest, Postman</div></div>
+                    <div class="skillgroup"><div class="lbl">Databases</div><div class="vals">PostgreSQL, MySQL, MongoDB, SQLite</div></div>
+                    <div class="skillgroup"><div class="lbl">Big Data</div><div class="vals">PySpark, Hadoop, Hive, Databricks</div></div>
+                    <div class="skillgroup"><div class="lbl">DevOps &amp; Tools</div><div class="vals">Docker, Git, GitHub Actions, AWS CDK, Anaconda, Jupyter, Colab, Linux</div></div>
+                </section>
+
+                <section>
+                    <h2 class="sec">Techniques</h2>
+                    <ul class="tech">
+                        <li>Supervised &amp; unsupervised learning</li>
+                        <li>Model evaluation &amp; validation</li>
+                        <li>Ensemble methods &amp; boosting</li>
+                        <li>AutoML &amp; hyperparameter tuning</li>
+                        <li>Computer vision (detection, classification)</li>
+                        <li>Generative AI &amp; LLMs (RAG, LoRA, agents)</li>
+                        <li>ETL &amp; data pipelines · REST API design</li>
+                        <li>Discrete-event simulation &amp; digital twins</li>
+                        <li>Infrastructure as code (AWS CDK)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="sec">Key Projects</h2>
+                    <div class="proj">
+                        <span class="pn">ifc-chatbot</span> — <span class="pt">GenAI · RAG · LoRA</span>
+                        <p>Natural-language querying of IFC building models: RAG (FAISS + sentence-transformers), LoRA fine-tuning of Qwen, and a tool-calling agent over ifcopenshell.</p>
+                    </div>
+                    <div class="proj">
+                        <span class="pn">llm-job-rater</span> — <span class="pt">GenAI · Evaluation</span>
+                        <p>LLM job-fit rater (Qwen3-8B via Ollama) built around evaluation discipline: blind human-labelled ground truth, prompt iteration, metrics tracked in MLflow.</p>
+                    </div>
+                    <div class="proj">
+                        <span class="pn">setorium</span> — <span class="pt">Computer Vision</span>
+                        <p>Mushroom-species identifier (MobileNetV2 transfer learning + Flask) returning top-2 predictions with edibility, deployed on Heroku.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="sec">Languages</h2>
+                    <ul class="lang">
+                        <li><b>Spanish</b> — <span class="lvl">Native</span></li>
+                        <li><b>English</b> — <span class="lvl">Professional</span></li>
+                        <li><b>Catalan</b> — <span class="lvl">Conversational</span></li>
+                        <li><b>French</b> — <span class="lvl">Conversational</span></li>
+                        <li><b>Romanian</b> — <span class="lvl">Conversational</span></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
